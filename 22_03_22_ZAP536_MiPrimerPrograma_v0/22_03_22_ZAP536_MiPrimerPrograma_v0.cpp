@@ -38,4 +38,23 @@ int main()
     std::cout << "ingrese una palabra" << std::endl;
     std::cin >> miPrimerstring;
     std::cout << "su palabra es: " << miPrimerstring <<std::endl;
+
+    //otro forma de registrar datos
+    printf("ingrese un numero \n");
+    scanf_s("%d", mi_primer_entero);
+    printf("su numero es: %d \n", mi_primer_entero);
+
+    printf("ingrese un numero con decimal \n");
+    scanf_s("%f", miPrimerFloat);
+    printf("su numero es: %f \n", miPrimerFloat);
+
+    printf("ingrese un numero grande \n");
+    scanf_s("%lf", miPrimerDouble);
+    printf("su numero es: %lf \n", miPrimerDouble);
+
+    char d;
+    printf("ingrese un character \n");
+    getchar();
+    scanf_s("%c", &d, 1);
+    printf("su caracter es: %c \n", d);
 }
