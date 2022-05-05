@@ -18,7 +18,7 @@ int main()
 		int madefense = 8;
 		int maAtk = 9;
 		int mavel = 4;
-		int arhp = 450;
+		int arhp = 500;
 		int ardefense = 510;
 		int aratk = 450;
 		int arvel = 550;
@@ -26,6 +26,9 @@ int main()
 		cout << "hola este es el mundo pokemon \n";
 		cin.get();
 		cout << "por favor escoge un pokemon para tu combate \n";
+		cin.get();
+		cout << "Por cierto si en algun punto los dos pokemons en combate caen contara como una derrota igual \n";
+		cout << "Asegurate de no dejar que tu pokemon sea derrotado \n";
 		cin.get();
 		cout << "use 0 para raykuasa \n";
 		cout << "use 1 para magikarp \n";
@@ -46,17 +49,20 @@ int main()
 				switch (hit) {
 				case 0:
 					cout << "rykuaza ataco a arceus \n";
-					arhp -= 40;
+					arhp -= 60;
 					cout << "El hp de arceus es: " << arhp << endl;
 					cout << "arceus te ataca!! \n";
-					ryhp -= 25;
+					ryhp -= 58;
 					cout << "tu hp es: " << ryhp << endl;
 					break;
 				case 1:
 					cout << "rykuaza se defendio y regenero\n";
+					cout << "tu hp es: " << ryhp + 600 << endl;
 					cout << "arceus ataca!!! \n";
 					ryhp -= 5;
-					cout << "tu hp es: " << ryhp + 3 << endl;
+					cout << "tu hp es: " << ryhp << endl;
+					cout << "como no atacaste el enemigo se regenero \n";
+					cout << "el hp de arceus es " << arhp + 10 << endl;
 					break;
 				default:
 					cout << "el valor introducido no es valido \n";
@@ -64,6 +70,12 @@ int main()
 			}
 			if (ryhp <= 0) {
 				cout << "has perdido la batalla \n";
+				if (ryhp > arhp) {
+					cout << "pero ganas por tener mas hp que el oponente \n";
+				}
+				else {
+					cout << "perdiste completamente \n";
+				}
 			}
 			else {
 				cout << "tu pokemon ha vencido \n";
@@ -118,7 +130,7 @@ int main()
 				switch (hit) {
 				case 0:
 					cout << "arceus ataco a raykuaza \n";
-					ryhp -= 35;
+					ryhp -= 54;
 					cout << "El hp de rykuaza es: " << ryhp << endl;
 					cout << "raykuaza te ataca!! \n";
 					arhp -= 40;
@@ -128,7 +140,9 @@ int main()
 					cout << "arceus se defendio y regenero \n";
 					cout << "raykuaza ataca!!! \n";
 					arhp -= 7;
-					cout << "tu hp es: " << arhp + 5 << endl;
+					cout << "tu hp es: " << arhp + 30 << endl;
+					cout << "como no atacaste el enemigo se regenero un poco \n";
+					cout << "el hp de raykuaza es: " << ryhp + 5 << endl;
 					break;
 				default:
 					cout << "el valor introducido no es valido \n";
