@@ -41,7 +41,7 @@ int main()
 			cout << "un rival te reta a un du du du duelo \n";
 			while (ryhp >= 0 && arhp >= 0)
 			{
-				cout << "Eliga si atacar (0) o defenderse (1) \n";
+				cout << "Eliga si atacar (0) o defenderse y regenerarte (1) \n";
 				cin >> hit;
 				switch (hit) {
 				case 0:
@@ -122,7 +122,7 @@ int main()
 			cout << "un rival te reta a un du du du duelo \n";
 			while (arhp >= 0 && ryhp >= 0)
 			{
-				cout << "Eliga si atacar (0) o defenderse (1) \n";
+				cout << "Eliga si atacar (0) o defenderse y regenerarse (1) \n";
 				cin >> hit;
 				switch (hit) {
 				case 0:
