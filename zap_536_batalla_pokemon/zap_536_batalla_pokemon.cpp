@@ -27,9 +27,6 @@ int main()
 		cin.get();
 		cout << "por favor escoge un pokemon para tu combate \n";
 		cin.get();
-		cout << "Por cierto si en algun punto los dos pokemons en combate caen contara como una derrota igual \n";
-		cout << "Asegurate de no dejar que tu pokemon sea derrotado \n";
-		cin.get();
 		cout << "use 0 para raykuasa \n";
 		cout << "use 1 para magikarp \n";
 		cout << "use 2 para arceus \n";
@@ -150,6 +147,12 @@ int main()
 			}
 			if (arhp <= 0) {
 				cout << "has perdido la batalla \n";
+				if (arhp > ryhp) {
+					cout << "pero ganas por tener mas hp que el oponente \n";
+				}
+				else {
+					cout << "perdiste completamente \n";
+				}
 			}
 			else {
 				cout << "tu pokemon ha vencido \n";
