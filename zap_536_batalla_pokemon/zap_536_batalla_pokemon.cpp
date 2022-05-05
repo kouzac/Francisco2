@@ -53,10 +53,10 @@ int main()
 					cout << "tu hp es: " << ryhp << endl;
 					break;
 				case 1:
-					cout << "rykuaza se defendio \n";
+					cout << "rykuaza se defendio y regenero\n";
 					cout << "arceus ataca!!! \n";
 					ryhp -= 5;
-					cout << "tu hp es: " << ryhp << endl;
+					cout << "tu hp es: " << ryhp + 3 << endl;
 					break;
 				default:
 					cout << "el valor introducido no es valido \n";
@@ -125,10 +125,10 @@ int main()
 					cout << "tu hp es: " << arhp << endl;
 					break;
 				case 1:
-					cout << "arceus se defendio \n";
+					cout << "arceus se defendio y regenero \n";
 					cout << "raykuaza ataca!!! \n";
 					arhp -= 7;
-					cout << "tu hp es: " << arhp << endl;
+					cout << "tu hp es: " << arhp + 5 << endl;
 					break;
 				default:
 					cout << "el valor introducido no es valido \n";
