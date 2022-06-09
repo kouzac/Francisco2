@@ -105,7 +105,6 @@ int main()
     srand(time(NULL));
     jugadores();
     system("pause");
-    system("CLS");
     std::cout << "Los jugadores y sus stats son los siguientes: \n\n";
     stats();
     system("pause");
