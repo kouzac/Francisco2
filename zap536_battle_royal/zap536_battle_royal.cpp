@@ -16,6 +16,7 @@ void jugadores()
 {
     for (int i = 0; i <= 5; i++)
     {
+        std::cout << "Bienvenido al coliseo donde algunos guerreros pelearan por destacar \n";
         std::cout << "Escribe el nombre del guerrero #" << i + 1 << ":\n";
         std::getline(std::cin, n[i].jugador);
     }
@@ -65,10 +66,10 @@ void max_Stats(int maxHP, int maxATK, int maxDEF, int maxAGILIDAD, int wHP, int 
     }
     std::cout << "--------------------------------------------------------\n";
     std::cout << "LOS RESULTADOS DE LOS GANADORES SON: \n";
-    std::cout << "El jugador con mayor vida es: " << n[wHP].jugador << " con " << n[wHP].hp << " HP" << "Que buen tanque \n";
-    std::cout << "El jugador con mayor ataque es: " << n[wATK].jugador << " con " << n[wATK].atk << " ATK" << "Vaya maquina de matar \n";
-    std::cout << "El jugador con mayor defensa es: " << n[wDEF].jugador << " con " << n[wDEF].def << " DEF" << "Esponja de ataques \n";
-    std::cout << "El jugador con mayor agilidad es: " << n[wAGILIDAD].jugador << " con " << n[wAGILIDAD].agilidad << " AGILIDAD" << "deja de moverte mosquito \n";
+    std::cout << "El jugador con mayor vida es: " << n[wHP].jugador << " con " << n[wHP].hp << " HP " << "Que buen tanque \n";
+    std::cout << "El jugador con mayor ataque es: " << n[wATK].jugador << " con " << n[wATK].atk << " ATK " << "Vaya maquina de matar \n";
+    std::cout << "El jugador con mayor defensa es: " << n[wDEF].jugador << " con " << n[wDEF].def << " DEF " << "Esponja de ataques \n";
+    std::cout << "El jugador con mayor agilidad es: " << n[wAGILIDAD].jugador << " con " << n[wAGILIDAD].agilidad << " AGILIDAD " << "deja de moverte mosquito \n";
 
     for (size_t i = 0; i < 6; i++)
     {
@@ -95,10 +96,10 @@ void max_Stats(int maxHP, int maxATK, int maxDEF, int maxAGILIDAD, int wHP, int 
     }
     std::cout << "---------------------------------------------------------------- \n";
     std::cout << "LOS RESULTADOS DE LOS PERDEDORES SON: \n";
-    std::cout << "El jugador con la menor vida es: " << n[lHP].jugador << " con " << n[lHP].hp << " HP" << "empieza a comer mejor :/ \n";
-    std::cout << "El jugador con el menor ataque es: " << n[lATK].jugador << " con " << n[lATK].atk << " ATK" << "si sabes que tienes brazos, no? \n";
-    std::cout << "El jugador con la menor defensa es: " << n[lDEF].jugador << " con " << n[lDEF].def << " DEF" << "Te matan con solo mirarte \n";
-    std::cout << "El jugador con la menor agilidad es: " << n[lAgilidad].jugador << " con " << n[lAgilidad].agilidad << " AGILIDAD" << "Si saber como usar los pies verdad \n";
+    std::cout << "El jugador con la menor vida es: " << n[lHP].jugador << " con " << n[lHP].hp << " HP " << "empieza a comer mejor :/ \n";
+    std::cout << "El jugador con el menor ataque es: " << n[lATK].jugador << " con " << n[lATK].atk << " ATK " << "si sabes que tienes brazos, no? \n";
+    std::cout << "El jugador con la menor defensa es: " << n[lDEF].jugador << " con " << n[lDEF].def << " DEF " << "Te matan con solo mirarte \n";
+    std::cout << "El jugador con la menor agilidad es: " << n[lAgilidad].jugador << " con " << n[lAgilidad].agilidad << " AGILIDAD " << "Si saber como usar los pies verdad \n";
 }
 
 int main()
