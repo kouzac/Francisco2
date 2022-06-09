@@ -109,7 +109,7 @@ int main()
     srand(time(NULL));
     jugadores();
     system("pause");
-    std::cout << "Los jugadores y sus stats son los siguientes: \n\n";
+    std::cout << "Los guerreros y sus stats son los siguientes: \n\n";
     stats();
     system("pause");
     max_Stats(maxHP, maxATK, maxDEF, maxAGILIDAD, wHP, wATK, wDEF, wARMOR, minHP, minATK, minDEF, minAGILIDAD, lHP, lATK, lDEF, lArmor);
