@@ -1,3 +1,6 @@
+//Francisco Gerardo Robles De Jesús
+//Battle royal
+
 #include <iostream>
 #include <string>
 #include <Windows.h>
@@ -6,7 +9,7 @@
 struct player
 {
     std::string jugador;
-    int hp, atk, def, armor;
+    int hp, atk, def, agilidad;
 }n[8];
 
 void jugadores()
@@ -25,17 +28,17 @@ void stats()
         n[i].hp = rand() % 10;
         n[i].atk = rand() % 10;
         n[i].def = rand() % 10;
-        n[i].armor = rand() % 10;
+        n[i].agilidad = rand() % 10;
         std::cout << "Guerrero #" << i + 1 << ": " << n[i].jugador << " \n";
         std::cout << "  -Su vida es: " << n[i].hp << "\n";
         std::cout << "  -Su ataque es: " << n[i].atk << "\n";
         std::cout << "  -Su defensa es: " << n[i].def << "\n";
-        std::cout << "  -Su armadura es: " << n[i].armor << "\n";
+        std::cout << "  -Su agilidad es: " << n[i].agilidad << "\n";
         std::cout << "\n";
     }
 }
 
-void max_Stats(int maxHP, int maxATK, int maxDEF, int maxARMOR, int wHP, int wATK, int wDEF, int wARMOR, int minHP, int minATK, int minDEF, int minARMOR, int lHP, int lATK, int lDEF, int lArmor)
+void max_Stats(int maxHP, int maxATK, int maxDEF, int maxAGILIDAD, int wHP, int wATK, int wDEF, int wAGILIDAD, int minHP, int minATK, int minDEF, int minAGILIDAD, int lHP, int lATK, int lDEF, int lAgilidad)
 {
     for (size_t i = 0; i < 6; i++)
     {
@@ -54,18 +57,18 @@ void max_Stats(int maxHP, int maxATK, int maxDEF, int maxARMOR, int wHP, int wAT
             maxDEF = n[i].def;
             wDEF = i;
         }
-        if (n[i].armor > maxARMOR)
+        if (n[i].agilidad > maxAGILIDAD)
         {
-            maxARMOR = n[i].armor;
-            wARMOR = i;
+            maxAGILIDAD = n[i].agilidad;
+            wAGILIDAD = i;
         }
     }
-
+    std::cout << "--------------------------------------------------------\n";
     std::cout << "LOS RESULTADOS DE LOS GANADORES SON: \n";
-    std::cout << "El jugador con mayor vida es: " << n[wHP].jugador << " con " << n[wHP].hp << " HP\n";
-    std::cout << "El jugador con mayor ataque es: " << n[wATK].jugador << " con " << n[wATK].atk << " ATK\n";
-    std::cout << "El jugador con mayor defensa es: " << n[wDEF].jugador << " con " << n[wDEF].def << " DEF\n";
-    std::cout << "El jugador con mayor armadura es: " << n[wARMOR].jugador << " con " << n[wARMOR].armor << " ARMOR\n";
+    std::cout << "El jugador con mayor vida es: " << n[wHP].jugador << " con " << n[wHP].hp << " HP" << "Que buen tanque \n";
+    std::cout << "El jugador con mayor ataque es: " << n[wATK].jugador << " con " << n[wATK].atk << " ATK" << "Vaya maquina de matar \n";
+    std::cout << "El jugador con mayor defensa es: " << n[wDEF].jugador << " con " << n[wDEF].def << " DEF" << "Esponja de ataques \n";
+    std::cout << "El jugador con mayor agilidad es: " << n[wAGILIDAD].jugador << " con " << n[wAGILIDAD].agilidad << " AGILIDAD" << "deja de moverte mosquito \n";
 
     for (size_t i = 0; i < 6; i++)
     {
@@ -84,29 +87,29 @@ void max_Stats(int maxHP, int maxATK, int maxDEF, int maxARMOR, int wHP, int wAT
             minDEF = n[i].def;
             lDEF = i;
         }
-        if (n[i].armor < minARMOR)
+        if (n[i].agilidad < minAGILIDAD)
         {
-            minARMOR = n[i].armor;
-            lArmor = i;
+            minAGILIDAD = n[i].agilidad;
+            lAgilidad = i;
         }
     }
-
+    std::cout << "---------------------------------------------------------------- \n";
     std::cout << "LOS RESULTADOS DE LOS PERDEDORES SON: \n";
-    std::cout << "El jugador con la menor vida es: " << n[lHP].jugador << " con " << n[lHP].hp << " HP\n";
-    std::cout << "El jugador con el menor ataque es: " << n[lATK].jugador << " con " << n[lATK].atk << " ATK\n";
-    std::cout << "El jugador con la menor defensa es: " << n[lDEF].jugador << " con " << n[lDEF].def << " DEF\n";
-    std::cout << "El jugador con la menor armaduar es: " << n[lArmor].jugador << " con " << n[lArmor].armor << " ARMOR\n";
+    std::cout << "El jugador con la menor vida es: " << n[lHP].jugador << " con " << n[lHP].hp << " HP" << "empieza a comer mejor :/ \n";
+    std::cout << "El jugador con el menor ataque es: " << n[lATK].jugador << " con " << n[lATK].atk << " ATK" << "si sabes que tienes brazos, no? \n";
+    std::cout << "El jugador con la menor defensa es: " << n[lDEF].jugador << " con " << n[lDEF].def << " DEF" << "Te matan con solo mirarte \n";
+    std::cout << "El jugador con la menor agilidad es: " << n[lAgilidad].jugador << " con " << n[lAgilidad].agilidad << " AGILIDAD" << "Si saber como usar los pies verdad \n";
 }
 
 int main()
 {
-    int maxHP = 0, maxATK = 0, maxDEF = 0, maxARMOR = 0, wHP = 0, wATK = 0, wDEF = 0, wARMOR = 0;
-    int minHP = 10, minATK = 10, minDEF = 10, minARMOR = 10, lHP = 0, lATK = 0, lDEF = 0, lArmor = 0;
+    int maxHP = 0, maxATK = 0, maxDEF = 0, maxAGILIDAD = 0, wHP = 0, wATK = 0, wDEF = 0, wARMOR = 0;
+    int minHP = 10, minATK = 10, minDEF = 10, minAGILIDAD = 10, lHP = 0, lATK = 0, lDEF = 0, lArmor = 0;
     srand(time(NULL));
     jugadores();
     system("pause");
     std::cout << "Los jugadores y sus stats son los siguientes: \n\n";
     stats();
     system("pause");
-    max_Stats(maxHP, maxATK, maxDEF, maxARMOR, wHP, wATK, wDEF, wARMOR, minHP, minATK, minDEF, minARMOR, lHP, lATK, lDEF, lArmor);
+    max_Stats(maxHP, maxATK, maxDEF, maxAGILIDAD, wHP, wATK, wDEF, wARMOR, minHP, minATK, minDEF, minAGILIDAD, lHP, lATK, lDEF, lArmor);
 }
